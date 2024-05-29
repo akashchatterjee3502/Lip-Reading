@@ -68,18 +68,16 @@ def index():
 
 @app.route('/predict', methods=['GET', 'POST'])
 def prediction():
-    if request.method == 'POST':
-        
-        video = request.form.get('videoselect')
+    
+    video = request.form.get('videoselect')
 
-        numpy_path = os.path.join('static/media/backend',f'{video}.npy')
-        txt_path = os.path.join('static/media/backend',f'{video}.txt')
-        video_path = 'static/media/video/{}.mp4'.format(video)
-        
-        predicted = model_predict(numpy_path)
+    numpy_path = os.path.join('static/media/backend',f'{video}.npy')
+    txt_path = os.path.join('static/media/backend',f'{video}.txt')
+    video_path = 'static/media/video/{}.mp4'.format(video)
+    
+    predicted = model_predict(numpy_path)
 
-        with open(txt_path,'r') as f:
-            original = f.readline()
-        
-        return render_template('result.html',video_path=video_path,result=predicted,original=original)
-    return None
+    with open(txt_path,'r') as f:
+        original = f.readline()
+    
+    return render_template('result.html',video_path=video_path,result=predicted,original=original)
