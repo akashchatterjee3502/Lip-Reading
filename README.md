@@ -23,7 +23,7 @@ To run the project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/lip-reading.git
+   git clone https://github.com/akashchatterjee3502/lip-reading.git
    cd lip-reading
    ```
 
@@ -54,9 +54,3 @@ Contributions are welcome! If you would like to contribute to this project, plea
 3. Make your changes and ensure the code lints without errors.
 4. Commit your changes and push them to your fork.
 5. Submit a pull request with a detailed description of your changes.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-Feel free to customize it further to better fit your project's specifics!
