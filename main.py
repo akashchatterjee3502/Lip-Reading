@@ -22,7 +22,7 @@ def CTCLoss(y_true, y_pred):
 # Loading Model
 
 with tf.keras.utils.custom_object_scope({'CTCLoss': CTCLoss}):
-    model = tf.keras.models.load_model('models/model.keras')
+    model = tf.keras.models.load_model('models/model.keras', compile=False)
 
 # Defining vocab for string generation
 
@@ -83,7 +83,3 @@ def prediction():
         
         return render_template('result.html',video_path=video_path,result=predicted,original=original)
     return None
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
